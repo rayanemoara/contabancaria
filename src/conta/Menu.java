@@ -1,15 +1,28 @@
 package conta;
 
 import java.util.Scanner;
+
 import conta.util.Cores;
+import conta.model.Conta;
 
 public class Menu {
 
 	public static void main(String[] args) {
-
 		Scanner metodo = new Scanner(System.in);
 
 		int opcao;
+		
+		Conta c1 = new Conta(123456, 321, 1, "Maria dos Santos", 2500.0f);
+    	c1.visualizar();
+    
+    	Conta c2 = new Conta(45678, 113, 1, "João da Silva", 2000.0f);
+    	c2.visualizar();
+    
+    	c1.setSaldo(100000.0f);
+    	c1.setTitular("Maria Joaquina");
+    	c1.setAgencia(213);
+    	c1.setNumero(432);
+    	c1.visualizar();
 		
 		while (true) {
 
@@ -81,9 +94,8 @@ public class Menu {
 					break;
 			}
 		}
-
-	}
 	
+	}
 	public static void sobre() {
 		System.out.println("\n--------------------------------------------------");
 		System.out.println("Projeto Desenvolvido por: Rayane Moara da Silva");
@@ -92,5 +104,6 @@ public class Menu {
 		System.out.println("----------------------------------------------------");
 		
 	}
-
-}
+	
+	
+	}
