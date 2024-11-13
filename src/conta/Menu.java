@@ -199,7 +199,7 @@ public class Menu {
 						valor = scanner.nextFloat();
 
 					} while (valor <= 0);
-					contas.sacar(numeroDestino, valor);
+					contas.sacar(numero, valor);
 
 					keyPress();
 					break;
